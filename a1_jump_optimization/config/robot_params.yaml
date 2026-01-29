@@ -1,0 +1,39 @@
+# Unitree A1 Robot Parameters
+# All values from official specifications
+
+# Mass and Inertia
+mass: 12.0  # kg (total robot mass)
+body_inertia: 0.35  # kg*m^2 (simplified pitch inertia)
+
+# Gravity (LUNAR)
+gravity: 1.62  # m/s^2 (Moon gravity = Earth/6)
+
+# Torque Limits
+max_joint_torque: 33.5  # Nm (official A1 specification)
+
+# Leg Dimensions (simplified for centroidal model)
+leg_length: 0.4  # m (approximate effective leg length)
+body_length: 0.383  # m
+body_width: 0.094  # m
+body_height: 0.08  # m
+
+# Joint Limits (radians)
+joint_limits:
+  hip_min: -0.8
+  hip_max: 0.8
+  thigh_min: -1.0
+  thigh_max: 3.0
+  calf_min: -2.7
+  calf_max: -0.9
+
+# Contact Parameters
+friction_coefficient: 0.8  # static friction
+restitution: 0.0  # perfectly inelastic landing
+
+# Initial Conditions
+initial_height: 0.3  # m (standing height of CoM)
+initial_velocity: 0.0  # m/s
+
+# Optimization Parameters
+n_time_steps: 50  # number of discretization points
+max_time: 2.0  # seconds (maximum trajectory duration)
